@@ -1,0 +1,11 @@
+name	weight	height	color
+Stuart	7	10	brown
+Booboo	13	14	gray
+Milo	10	11	gray
+Simba	14	13	orange
+Ellie	15	12	white black
+Luna	16	12	white brown
+Maher	17	13	white brown
+Maui	16	11	brown
+Beemer	15	13	gray
+Cocoa	11	11	gray
