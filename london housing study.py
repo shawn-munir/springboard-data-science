@@ -163,22 +163,22 @@ create_price_ratio(london)
 #Basically we wanna iterate thru the list of boroughs, for each one, get the avg price in 1998 and 2018 and divide
         
 
-# import pandas as pd
-# import numpy as np
-# import datetime as dt
+import pandas as pd
+import numpy as np
+import datetime as dt
 
-# url_LondonHousePrices = "https://data.london.gov.uk/download/uk-house-price-index/70ac0766-8902-4eb5-aab5-01951aaed773/UK%20House%20price%20index.xls"
-# properties = pd.read_excel(url_LondonHousePrices, sheet_name='Average price', index_col= None)
-# properties = properties.transpose()
-# properties = properties.reset_index()
-# properties.columns = properties.iloc[0]
-# properties = properties[1:]
-# properties = properties.reset_index(drop=True)
-# properties.rename(columns={'Unnamed: 0':'Borough'}, inplace=True)
-# properties.columns = properties.columns.fillna('Post Code')
-# properties = properties.melt(id_vars=('Borough', 'Post Code'), var_name='Date', value_name='Avg House Price')
-# properties['Avg House Price'] = properties['Avg House Price'].apply(pd.to_numeric)
-# properties = properties.dropna()
+url_LondonHousePrices = "https://data.london.gov.uk/download/uk-house-price-index/70ac0766-8902-4eb5-aab5-01951aaed773/UK%20House%20price%20index.xls"
+properties = pd.read_excel(url_LondonHousePrices, sheet_name='Average price', index_col= None)
+properties = properties.transpose()
+properties = properties.reset_index()
+properties.columns = properties.iloc[0]
+properties = properties[1:]
+properties = properties.reset_index(drop=True)
+properties.rename(columns={'Unnamed: 0':'Borough'}, inplace=True)
+properties.columns = properties.columns.fillna('Post Code')
+properties = properties.melt(id_vars=('Borough', 'Post Code'), var_name='Date', value_name='Avg House Price')
+properties['Avg House Price'] = properties['Avg House Price'].apply(pd.to_numeric)
+properties = properties.dropna()
 
 
 
