@@ -1,0 +1,18 @@
+import pandas as pd
+import numpy as np
+
+airlines = pd.read_csv('airlines.csv')
+
+airlines['id'] = airlines['id'].astype('str')
+
+id_digits = airlines['id'].str.len()
+
+
+#show me the full rows where id_digits are < 3
+print(airlines.loc[id_digits<3])#, 'id', '\n')
+#same as
+print(airlines.loc[airlines['id'].str.len()<3], 'id', '\n')
+#same as
+print(airlines[airlines['id'].str.len() < 3])
+
+
