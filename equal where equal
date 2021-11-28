@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+
+flights = pd.read_csv('flights.csv')
+
+sum_classes = flights[['economy_class', 'business_class', 'first_class']].sum(axis = 1)
+
+#make this new list of the booleans for each line if sum_classes (the manual sum)
+#is equal to the listed sum in that row
+passenger_equ = sum_classes == flights['total_passengers']
